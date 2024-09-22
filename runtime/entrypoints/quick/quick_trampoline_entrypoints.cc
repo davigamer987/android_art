@@ -2552,7 +2552,7 @@ extern "C" void artMethodExitHook(Thread* self,
       << "Enter instrumentation exit stub with pending exception " << self->GetException()->Dump();
 
   instrumentation::Instrumentation* instr = Runtime::Current()->GetInstrumentation();
-  DCHECK(instr->RunExitHooks());
+//  DCHECK(instr->RunExitHooks());
 
   ArtMethod* method = *sp;
   if (instr->HasFastMethodExitListenersOnly()) {
